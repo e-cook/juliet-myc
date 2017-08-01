@@ -3,8 +3,8 @@ Contributors: aristath, fovoc, igmoweb
 Tags: customizer,options framework, theme, mods, toolkit
 Donate link: http://kirki.org/
 Requires at least: 4.4
-Tested up to: 4.5
-Stable tag: 2.3.4
+Tested up to: 4.8
+Stable tag: 2.3.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,51 @@ Simply install as a normal WordPress plugin and activate.
 If you want to integrate Kirki in your theme or plugin, please read the instructions on [our ducumentation site](https://kirki.org/docs/advanced/integration.html).
 
 == Changelog ==
+
+= 2.3.8 =
+
+May 28, 2017, dev time: 15 minutes.
+
+This is a maintenance release that prepares for 3.0.0 coming soon.
+
+* Fix: Updating webfonts.
+* New: Added ability to use upgrade notices. Needed for v3.0 in a few days.
+
+= 2.3.7 =
+
+October 22, 2016, dev time: 12 hours.
+
+* Fix: `spacing` controls were not updating after save
+* New: Now using the WP Notifications API in the customizer for spacing & dimension controls (requires WP 4.6).
+* Fix: Allow overriding `option_type` with `theme_mod` when global config uses `option` by using the `option_type` argument in the fields.
+* Fix: Disabled the custom kirki-preview loader. This will have to be built more modular in future versions.
+* Fix: Refactored panel & section icons.
+* Fix: postMessage now works better with slider controls.
+* Fix: Reset button not working unless tooltips are loaded.
+* Fix: Properly sanitize `link` and `url` fields.
+* Fix: Automate sanitization for `repeater` fields.
+
+= 2.3.6 =
+
+August 28, 2016, dev time: 3 hours.
+
+* Fix: CSS prefixes order fixes ([#1042](https://github.com/aristath/kirki/pull/1042)).
+* Fix: `suffix` output argument support in Multicolor control ([#1042](https://github.com/aristath/kirki/pull/1042)).
+* Fix: `Kirki::get_variables()` method should be static ([#1050](https://github.com/aristath/kirki/pull/1050)).
+* Fix: Add line wrapping to CodeMirror ([#1079](https://github.com/aristath/kirki/pull/1079)).
+* Fix: `container_inclusive` is disregarded on the selective refresh class ([#1089](https://github.com/aristath/kirki/issues/1089)).
+* Fix: Support `input_attrs` parameter for controls ([#1074](https://github.com/aristath/kirki/issues/1074)).
+* Fix: Outdated Google-Fonts list ([#1091](https://github.com/aristath/kirki/issues/1091)).
+
+= 2.3.5 =
+
+July 2, 2016. dev time: 6 hours.
+
+* FIX: Missing button labels in `repeater` fields.
+* FIX: Missing button label in `code` fields ([#1017](https://github.com/aristath/kirki/issues/1017)).
+* FIX: Better implementation when embedding Kirki in a theme ([#1025](https://github.com/aristath/kirki/issues/1025)).
+* FIX: Updated google-fonts ([#1041](https://github.com/aristath/kirki/issues/1041)).
+* NEW: Allow simpler format for `variables` argument ([#1020](https://github.com/aristath/kirki/issues/1020)).
 
 = 2.3.4 =
 

@@ -71,8 +71,12 @@
                         } 
                         else { 
                             $juliet_text_logo = juliet_get_option('juliet_text_logo');
-                            if($juliet_text_logo == '') $juliet_text_logo = get_bloginfo('name'); ?>
+                            if($juliet_text_logo == '') $juliet_text_logo = get_bloginfo('name'); 
+							if ( is_front_page() ) { ?>
                             <h1 class="header-logo-text"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($juliet_text_logo) ?></a></h1>
+							<?php } else { ?>
+							<div class="header-logo-text"><a href="<?php echo esc_url(home_url('/')); ?>"><?php echo esc_html($juliet_text_logo) ?></a></div>
+							<?php } ?>
                         <?php } ?>
 					</div>
                     <?php if( display_header_text() ) { $tagline = get_bloginfo('description'); if($tagline != '') { ?>

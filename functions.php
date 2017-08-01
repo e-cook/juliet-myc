@@ -114,17 +114,17 @@ function juliet_scripts() {
     }
     
     // Load html5shiv.js
-	wp_enqueue_script( 'juliet-html5', get_template_directory_uri() . '/assets/js/html5shiv.js'); #, array('juliet-style'), '3.7.0' );
-	error_log('one: ' . wp_script_add_data( 'juliet-html5', 'conditional', 'lt IE 9' ));
+	wp_enqueue_script( 'juliet-html5', get_template_directory_uri() . '/assets/js/html5shiv.js', array('juliet-style'), '3.7.0' );
+	wp_script_add_data( 'juliet-html5', 'conditional', 'lt IE 9' );
     // Load respond.min.js
-	wp_enqueue_script( 'juliet-respond', get_template_directory_uri() . '/assets/js/respond.min.js'); #, array('juliet-style'), '1.3.0' );
-	error_log('two: ' . wp_script_add_data( 'juliet-respond', 'conditional', 'lt IE 9' ));
+	wp_enqueue_script( 'juliet-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array('juliet-style'), '1.3.0' );
+	wp_script_add_data( 'juliet-html5', 'conditional', 'lt IE 9' );
     
     /* Scripts */
     
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/assets/js/bootstrap.min.js', array('jquery'), '', true );
     if ( class_exists( 'WooCommerce' ) ) {
-        wp_enqueue_script('slick', get_template_directory_uri().'/assets/js/slick.min.js', ['jquery'], '', true);
+        wp_enqueue_script('slick', get_template_directory_uri().'/assets/js/slick.min.js', array('jquery'), '', true);
     }
     if(juliet_get_option('juliet_enable_fancy_scrollbar') == 1){
         wp_enqueue_script('nice-scroll', get_template_directory_uri() . '/assets/js/nicescroll.min.js', array('jquery'), '', true );
@@ -335,13 +335,13 @@ function juliet_nice_scroll(){
     $juliet_custom_colors = juliet_get_option('juliet_custom_colors');
     if($juliet_custom_colors == 0) $color = $juliet_defaults['juliet_custom_colors_scrollbar'];
     else $color = juliet_get_option('juliet_custom_colors_scrollbar');
-    $script = 'jQuery("html").niceScroll({ cursorcolor:"' . esc_attr($color) . '",
+    $script = 'jQuery(document).ready(function($){jQuery("html").niceScroll({ cursorcolor:"' . esc_attr($color) . '",
                                 cursorborder:"' . esc_attr($color) . '",
                                 cursoropacitymin:0.2,
                                 cursorwidth:10,
                                 zindex:10,
                                 scrollspeed:60,
-                                mousescrollstep:40});';
+                                mousescrollstep:40}); });';
     wp_add_inline_script( 'juliet-js', $script );
 }
 add_action( 'wp_enqueue_scripts', 'juliet_nice_scroll', 998 );

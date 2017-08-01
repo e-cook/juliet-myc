@@ -4,14 +4,14 @@
 add_filter('woocommerce_breadcrumb_defaults', 'juliet_woocommerce_breadcrumbs');
 function juliet_woocommerce_breadcrumbs()
 {
-    return [
+    return array(
         'delimiter' => '',
         'wrap_before' => '<ol class="woocommerce-breadcrumb breadcrumb">',
         'wrap_after' => '</ol>',
         'before' => '<li>',
         'after' => '</li>',
         'home' => _x('Home', 'breadcrumb', 'juliet'),
-    ];
+    );
 }
 
 #Woocommerce Loop Hooks
@@ -81,11 +81,12 @@ function woocommerce_get_product_thumbnail($size = 'large', $deprecated1 = 0, $d
 
     if (has_post_thumbnail()) {
         $props = wc_get_product_attachment_props(get_post_thumbnail_id(), $post);
-        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size)[0];
+        $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), $size);
+		$image = $image[0];
 
         return '<img src="'.$props['src'].'" alt="'.$props['alt'].'" title="'.$props['title'].'" class="img-responsive" />';
     } elseif (wc_placeholder_img_src()) {
-        return '<img src="'.woocommerce_placeholder_img_src().'" alt="No image" class="img-responsive" />';
+        return '<img src="'.woocommerce_placeholder_img_src().'" alt="'.esc_html__('No image', 'juliet').'" class="img-responsive" />';
     }
 }
 

@@ -3,7 +3,7 @@
 Author: LyraThemes www.lyrathemes.com
 Requires at least: WordPress 4.5
 Tested up to: WordPress 4.7+
-Version: 1.3
+Version: 1.3.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 Tags: one-column, two-columns, right-sidebar, flexible-header, custom-background, custom-header, custom-menu, featured-images, footer-widgets, sticky-post, theme-options, threaded-comments, translation-ready, blog, food-and-drink, entertainment, photography
