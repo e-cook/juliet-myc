@@ -114,10 +114,10 @@ function juliet_scripts() {
     }
     
     // Load html5shiv.js
-	wp_enqueue_script( 'juliet-html5', get_template_directory_uri() . '/assets/js/html5shiv.js', array('juliet-style'), '3.7.0' );
+	wp_enqueue_script( 'juliet-html5', get_template_directory_uri() . '/assets/js/html5shiv.js' ); //, array('juliet-style'), '3.7.0' );
 	wp_script_add_data( 'juliet-html5', 'conditional', 'lt IE 9' );
     // Load respond.min.js
-	wp_enqueue_script( 'juliet-respond', get_template_directory_uri() . '/assets/js/respond.min.js', array('juliet-style'), '1.3.0' );
+	wp_enqueue_script( 'juliet-respond', get_template_directory_uri() . '/assets/js/respond.min.js' ); //, array('juliet-style'), '1.3.0' );
 	wp_script_add_data( 'juliet-html5', 'conditional', 'lt IE 9' );
     
     /* Scripts */

@@ -15,14 +15,15 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.5.0
+ * @version     3.1.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<li class="shipping">
-    <label><?php echo wp_kses_post( $package_name ); ?></label>
+<tr class="shipping">
+	<th><?php echo wp_kses_post( $package_name ); ?></th>
+	<td data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( 1 < count( $available_methods ) ) : ?>
 			<ul id="shipping_method">
 				<?php foreach ( $available_methods as $method ) : ?>
@@ -44,16 +45,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 				do_action( 'woocommerce_after_shipping_rate', $method, $index );
 			?>
 		<?php elseif ( ! WC()->customer->has_calculated_shipping() ) : ?>
-			<?php echo wpautop( __( 'Shipping costs will be calculated once you have provided your address.', 'juliet' ) ); ?>
+			<?php echo wpautop( __( 'Shipping costs will be calculated once you have provided your address.', 'woocommerce' ) ); ?>
 		<?php else : ?>
-			<?php echo apply_filters( is_cart() ? 'woocommerce_cart_no_shipping_available_html' : 'woocommerce_no_shipping_available_html', wpautop( __( 'There are no shipping methods available. Please double check your address, or contact us if you need any help.', 'juliet' ) ) ); ?>
+			<?php echo apply_filters( is_cart() ? 'woocommerce_cart_no_shipping_available_html' : 'woocommerce_no_shipping_available_html', wpautop( __( 'There are no shipping methods available. Please double check your address, or contact us if you need any help.', 'woocommerce' ) ) ); ?>
 		<?php endif; ?>
 
 		<?php if ( $show_package_details ) : ?>
 			<?php echo '<p class="woocommerce-shipping-contents"><small>' . esc_html( $package_details ) . '</small></p>'; ?>
 		<?php endif; ?>
 
-		<?php if ( is_cart() && ! $index ) : ?>
+		<?php if ( ! empty( $show_shipping_calculator ) ) : ?>
 			<?php woocommerce_shipping_calculator(); ?>
 		<?php endif; ?>
-</li>
+	</td>
+</tr>

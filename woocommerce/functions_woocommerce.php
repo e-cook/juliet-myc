@@ -86,7 +86,7 @@ function woocommerce_get_product_thumbnail($size = 'large', $deprecated1 = 0, $d
 
         return '<img src="'.$props['src'].'" alt="'.$props['alt'].'" title="'.$props['title'].'" class="img-responsive" />';
     } elseif (wc_placeholder_img_src()) {
-        return '<img src="'.woocommerce_placeholder_img_src().'" alt="'.esc_html__('No image', 'juliet').'" class="img-responsive" />';
+        return '<img src="'.wc_placeholder_img_src().'" alt="'.esc_html__('No image', 'juliet').'" class="img-responsive" />';
     }
 }
 
