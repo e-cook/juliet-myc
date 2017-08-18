@@ -7,8 +7,8 @@
 ?>
 <?php 
 /*------------------------------
- Panels and Sections
- ------------------------------*/
+   Panels and Sections
+   ------------------------------*/
 
 function juliet_customizer_panels_sections( $wp_customize ) {
     
@@ -29,19 +29,24 @@ function juliet_customizer_panels_sections( $wp_customize ) {
         'priority'    => 61,
         'title'       => esc_html__( 'Front Page', 'juliet' ),
     ) );
-	$wp_customize->add_section( 'juliet_section_frontpage_banner', array(
+    $wp_customize->add_section( 'juliet_section_frontpage_banner', array(
         'title'       => esc_html__( 'Banner Settings', 'juliet' ),
         'priority'    => 62,
         'panel'       => 'juliet_panel_frontpage',
     ) );
+    $wp_customize->add_section( 'juliet_section_frontpage_midsection', array(
+        'title'       => esc_html__( 'Midsection', 'juliet' ),
+        'priority'    => 63,
+        'panel'       => 'juliet_panel_frontpage',
+    ) );
     $wp_customize->add_section( 'juliet_section_frontpage_featured_posts', array(
         'title'       => esc_html__( 'Featured Posts', 'juliet' ),
-        'priority'    => 63,
+        'priority'    => 64,
         'panel'       => 'juliet_panel_frontpage',
     ) );
     $wp_customize->add_section( 'juliet_section_frontpage_blog_feed', array(
         'title'       => esc_html__( 'Blog Feed', 'juliet' ),
-        'priority'    => 64,
+        'priority'    => 65,
         'panel'       => 'juliet_panel_frontpage',
     ) );
     
@@ -56,7 +61,7 @@ function juliet_customizer_panels_sections( $wp_customize ) {
         'title'       => esc_html__( 'Posts', 'juliet' ),
         'priority'    => 71,
     ) );
-   
+    
     #juliet_section_pages
     $wp_customize->add_section( 'juliet_section_pages', array(
         'title'       => esc_html__( 'Pages', 'juliet' ),
@@ -74,9 +79,9 @@ add_action( 'customize_register', 'juliet_customizer_panels_sections' );
 
 
 /*------------------------------
- Fields
- ------------------------------*/
- 
+   Fields
+   ------------------------------*/
+
 function juliet_customizer_fields( $fields ) {
     
     global $juliet_defaults;
@@ -121,7 +126,7 @@ function juliet_customizer_fields( $fields ) {
         'section'     => 'juliet_section_theme_info',
         'priority'    => 1,
 
-        );
+    );
     
     #juliet_section_general_settings
     #-----------------------------------------
@@ -134,15 +139,15 @@ function juliet_customizer_fields( $fields ) {
         'priority'    => 1,
         'default'     => $juliet_defaults['juliet_skin'],
         'choices'     => array(
-                            'Classic'   => array(
-                                esc_attr__( 'Classic', 'juliet' ),
-                                esc_attr__( 'Serif fonts and pink accent color.', 'juliet' ),
-                            ),
-                            'Contemporary' => array(
-                                esc_attr__( 'Contemporary', 'juliet' ),
-                                esc_attr__( 'Minimalist look, black and white.', 'juliet' ),
-                            ),
-                        ),
+            'Classic'   => array(
+                esc_attr__( 'Classic', 'juliet' ),
+                esc_attr__( 'Serif fonts and pink accent color.', 'juliet' ),
+            ),
+            'Contemporary' => array(
+                esc_attr__( 'Contemporary', 'juliet' ),
+                esc_attr__( 'Minimalist look, black and white.', 'juliet' ),
+            ),
+        ),
     );
     $fields[] = array(
         'type'        => 'textarea',
@@ -181,7 +186,7 @@ function juliet_customizer_fields( $fields ) {
         'priority'    => 5,
         'default'     => $juliet_defaults['juliet_sticky_post_signature']
     );
-	$fields[] = array(
+    $fields[] = array(
         'type'        => 'toggle',
         'settings'    => 'juliet_example_content',
         'label'       => esc_html__( 'Show Example Content?', 'juliet' ),
@@ -255,8 +260,8 @@ function juliet_customizer_fields( $fields ) {
         'sanitize_callback' => 'sanitize_text_field',
     );
     
-	
-	#juliet_section_frontpage_banner
+    
+    #juliet_section_frontpage_banner
     #-----------------------------------------
     
     $fields[] = array(
@@ -267,8 +272,8 @@ function juliet_customizer_fields( $fields ) {
         'priority'    => 1,
         'default'     => $juliet_defaults['juliet_frontpage_banner_overlay_show'],
     );
-	
-	$fields[] = array(
+    
+    $fields[] = array(
         'type'        => 'color',
         'settings'    => 'juliet_frontpage_banner_overlay_color',
         'label'       => esc_html__( 'Select Color', 'juliet' ),
@@ -276,9 +281,43 @@ function juliet_customizer_fields( $fields ) {
         'priority'    => 2,
         'default'     => $juliet_defaults['juliet_frontpage_banner_overlay_color'],
         'sanitize_callback' => 'sanitize_hex_color',
-		'active_callback'  => array( array( 'setting'  => 'juliet_frontpage_banner_overlay_show', 'operator' => '==', 'value'    => '1', ),)
+	'active_callback'  => array( array( 'setting'  => 'juliet_frontpage_banner_overlay_show', 'operator' => '==', 'value'    => '1', ),)
     );
     
+    #juliet_section_frontpage_midsection
+    #-----------------------------------------
+    
+    $fields[] = array(
+        'type'        => 'switch',
+        'settings'    => 'juliet_frontpage_midsection_show',
+        'label'       => esc_html__( 'Show midsection?', 'juliet' ),
+        'description' => esc_html__( 'Choose whether to display the midsection.', 'juliet' ),
+        'section'     => 'juliet_section_frontpage_midsection',
+        'priority'    => 1,
+        'default'     => $juliet_defaults['juliet_frontpage_midsection_show'],
+        'choices'     => array( 'on'  => esc_attr__( 'SHOW', 'juliet' ), 'off' => esc_attr__( 'HIDE', 'juliet' ), )
+    );
+    $fields[] = array(
+        'type'        => 'textarea',
+        'settings'    => 'juliet_frontpage_midsection_text',
+        'label'       => esc_html__( 'Midsection text', 'juliet' ),
+        'description' => esc_html__( 'Accepts HTML.', 'juliet' ),
+        'section'     => 'juliet_section_frontpage_midsection',
+        'priority'    => 2,
+        'default'     => $juliet_defaults['juliet_frontpage_midsection_text'],
+        'sanitize_callback' => 'force_balance_tags',
+    );
+    
+    $fields[] = array(
+        'type'        => 'image',
+        'settings'     => 'juliet_frontpage_midsection_picture',
+        'label'       => esc_html__( 'Midsection picture', 'juliet' ),
+        'description' => esc_html__( 'Upload an image to include in the midsection', 'juliet' ),
+        'section'     => 'juliet_section_frontpage_midsection',
+        'priority'    => 3,
+        'default'     => $juliet_defaults['juliet_frontpage_midsection_picture']
+    );
+
     #juliet_section_frontpage_featured_posts
     #-----------------------------------------
     
@@ -349,10 +388,11 @@ function juliet_customizer_fields( $fields ) {
         'choices'     => Kirki_Helper::get_posts( array( 'numberposts' => -1 ) ),
         'active_callback'  => array( array( 'setting'  => 'juliet_frontpage_featured_posts_show', 'operator' => '==', 'value'    => '1', ), )
     );
+
     
     #juliet_section_frontpage_blog_feed
     #-----------------------------------------
-  
+    
     $fields[] = array(
         'type'        => 'radio-image',
         'settings'    => 'juliet_frontpage_blog_feed_sidebar',
@@ -429,13 +469,13 @@ function juliet_customizer_fields( $fields ) {
         'priority'    => 7,
         'default'     => $juliet_defaults['juliet_blog_feed_post_format'],
         'choices'     => array(
-                            'Excerpt'  => array(
-                                esc_attr__( 'Image and Excerpt', 'juliet' ),
-                            ),
-                            'Full'   => array(
-                                esc_attr__( 'Image and Full Content', 'juliet' ),
-                            )                            
-                        ),
+            'Excerpt'  => array(
+                esc_attr__( 'Image and Excerpt', 'juliet' ),
+            ),
+            'Full'   => array(
+                esc_attr__( 'Image and Full Content', 'juliet' ),
+            )                            
+        ),
     );
     $fields[] = array(
         'type'        => 'radio-image',
@@ -448,8 +488,8 @@ function juliet_customizer_fields( $fields ) {
         'choices'     => array( '0' => trailingslashit( get_template_directory_uri() ) . 'customize/images/full.png',
                                 '1' => trailingslashit( get_template_directory_uri() ) . 'customize/images/sidebar.png', ),
     );
-	
-	$fields[] = array(
+    
+    $fields[] = array(
         'type'        => 'text',
         'settings'     => 'juliet_blog_feed_label',
         'label'       => esc_html__( 'Heading for Blog Feed', 'juliet' ),
@@ -541,7 +581,7 @@ function juliet_customizer_fields( $fields ) {
     /* juliet_section_pages */
     #-----------------------------------------
     
-   $fields[] = array(
+    $fields[] = array(
         'type'        => 'radio-image',
         'settings'    => 'juliet_pages_sidebar',
         'label'       => esc_html__( 'Layout', 'juliet' ),
@@ -563,20 +603,20 @@ function juliet_customizer_fields( $fields ) {
     );
     
     /* juliet_section_advanced */
-   #-----------------------------------------
-	if(juliet_show_custom_css_field()){
-    $fields[] = array(
-        'type'        => 'code',
-        'settings'    => 'juliet_advanced_css',
-        'label'       => esc_html__( 'Custom CSS', 'juliet' ),
-        'description' => esc_html__( 'Custom CSS code to modify styling.', 'juliet' ),
-        'section'     => 'juliet_section_advanced',
-        'priority'    => 1,
-        'choices'     => array( 'language' => 'css', 'theme'    => 'monokai', 'height'   => 250, ),
-        'sanitize_callback' => 'wp_filter_nohtml_kses'
-    );
+    #-----------------------------------------
+    if(juliet_show_custom_css_field()){
+	$fields[] = array(
+            'type'        => 'code',
+            'settings'    => 'juliet_advanced_css',
+            'label'       => esc_html__( 'Custom CSS', 'juliet' ),
+            'description' => esc_html__( 'Custom CSS code to modify styling.', 'juliet' ),
+            'section'     => 'juliet_section_advanced',
+            'priority'    => 1,
+            'choices'     => array( 'language' => 'css', 'theme'    => 'monokai', 'height'   => 250, ),
+            'sanitize_callback' => 'wp_filter_nohtml_kses'
+	);
     }
-	
+    
     return $fields;
 }
 

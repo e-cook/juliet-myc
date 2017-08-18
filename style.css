@@ -329,6 +329,12 @@ img.aligncenter { max-width:100%; height:auto;}
 .frontpage-featured-posts .row{margin-left:-20px;margin-right:-20px}
 .frontpage-featured-posts .row > div{padding-left:20px;padding-right:20px}
 
+/* FRONT PAGE - MIDSECTION
+------------------------------------------------------------------------*/
+
+.frontpage-midsection{overflow:hidden;position:relative}
+.frontpage-midsection .entry-title{font-size:18px;}
+
 
 /* BLOG FEED
 ------------------------------------------------------------------------*/

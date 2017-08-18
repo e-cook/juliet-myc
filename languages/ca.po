@@ -1,0 +1,1293 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-08-18 16:18+0200\n"
+"PO-Revision-Date: 2017-08-18 16:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__;_n;_x;_nx;esc_attr__;"
+"esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: assets\n"
+"X-Poedit-SearchPathExcluded-1: inc\n"
+
+#: 404.php:18
+msgid "404"
+msgstr ""
+
+#: 404.php:19
+msgid "Page Not Found"
+msgstr "No s'han trobat productes"
+
+#: comments.php:14 woocommerce/single-product-reviews.php:109
+msgid "Name"
+msgstr "Nom"
+
+#: comments.php:16 woocommerce/single-product-reviews.php:111
+msgid "Email Address"
+msgstr "Email"
+
+#: comments.php:18
+msgid "Website"
+msgstr ""
+
+#: comments.php:20
+msgid "Comment"
+msgstr ""
+
+#: comments.php:36
+#, php-format
+msgid "One thought on &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:41
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:71
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:76
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: customize/customizer.php:17 customize/customizer.php:95
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: customize/customizer.php:23
+msgid "General Settings"
+msgstr ""
+
+#: customize/customizer.php:30
+msgid "Front Page"
+msgstr "Pàgina principal"
+
+#: customize/customizer.php:33
+msgid "Banner Settings"
+msgstr ""
+
+#: customize/customizer.php:38
+msgid "Midsection"
+msgstr "Part mitjana"
+
+#: customize/customizer.php:43 customize/theme-defaults.php:31
+msgid "Featured Posts"
+msgstr "Entrades destacades"
+
+#: customize/customizer.php:48 customize/customizer.php:55
+msgid "Blog Feed"
+msgstr ""
+
+#: customize/customizer.php:61
+msgid "Posts"
+msgstr "Entrades"
+
+#: customize/customizer.php:67 functions.php:417
+msgid "Pages"
+msgstr "Pàgines"
+
+#: customize/customizer.php:73
+msgid "Advanced"
+msgstr "Avançat"
+
+#: customize/customizer.php:96
+msgid ""
+"\n"
+"        <h1>Juliet Pro</h1>\n"
+"        <p><a class=\"button\" href=\"https://www.lyrathemes.com/juliet-pro/"
+"\" target=\"_blank\">Upgrade to Juliet Pro</a></p>\n"
+"        <p>Many awesome features included in the pro version of this theme. "
+"View the <a href=\"http://www.lyrathemes.com/preview/?theme=juliet-pro\" "
+"target=\"_blank\">Juliet Pro Demo</a> to see the additional features and "
+"functionality available in your upgrade.</p>\n"
+"        <p>Here are some of the features available in the pro version:\n"
+"        <ul>\n"
+"            <li>&raquo; Slider options: strip slider or default slider</li>\n"
+"            <li>&raquo; Slider options: posts slider or custom slider</li>\n"
+"            <li>&raquo; Optional sticky header navigation</li>\n"
+"            <li>&raquo; Built-in Ads</li>\n"
+"            <li>&raquo; Built-in Related Posts</li>\n"
+"            <li>&raquo; Lookbook/Index page template</li>\n"
+"            <li>&raquo; Additional home page elements</li>\n"
+"            <li>&raquo; One on one personal support and continuous theme "
+"updates</li>\n"
+"        </ul>\n"
+"        </p>\n"
+"        <hr />\n"
+"        <h1>Current Theme: Juliet</h1>\n"
+"        <h3>Demo Site</h3>\n"
+"        <p>Head on over to the <a href=\"http://www.lyrathemes.com/preview/?"
+"theme=juliet\" target=\"_blank\">Juliet demo</a> to see what you can "
+"accomplish with this theme!</p>\n"
+"        <h3>Documentation</h3>\n"
+"        <p>Read how to customize the theme, set up widgets, and learn of all "
+"the possible options available to you.</p>\n"
+"        <p><a class=\"button\" href=\"https://www.lyrathemes.com/"
+"documentation/juliet.pdf\" target=\"_blank\">Juliet Documentation</a></p>\n"
+"        <h3>Sample Data</h3>\n"
+"        <p>You can install the content and settings shown on our demo site "
+"by importing this sample data.</p>\n"
+"        <p><a class=\"button\" href=\"https://www.lyrathemes.com/sample-data/"
+"juliet-sample-data.zip\" target=\"_blank\">Juliet Sample Data</a></p>\n"
+"        <h3>Feedback and Support</h3>\n"
+"        <p>For feedback and support, please contact us and we would be happy "
+"to assist!</p>\n"
+"        <p><a class=\"button\" href=\"https://www.lyrathemes.com/support/\" "
+"target=\"_blank\">Juliet Support</a></p>\n"
+"        "
+msgstr ""
+
+#: customize/customizer.php:137
+msgid "Select Skin"
+msgstr ""
+
+#: customize/customizer.php:143
+msgid "Classic"
+msgstr ""
+
+#: customize/customizer.php:144
+msgid "Serif fonts and pink accent color."
+msgstr ""
+
+#: customize/customizer.php:147
+msgid "Contemporary"
+msgstr ""
+
+#: customize/customizer.php:148
+msgid "Minimalist look, black and white."
+msgstr ""
+
+#: customize/customizer.php:155
+msgid "Copyright Text"
+msgstr ""
+
+#: customize/customizer.php:156 customize/customizer.php:304
+msgid "Accepts HTML."
+msgstr "Es pot escriure en HTML"
+
+#: customize/customizer.php:165
+msgid "Enable Off Canvas Menu?"
+msgstr ""
+
+#: customize/customizer.php:166
+msgid ""
+"Whether to show an off canvas menu that you can populate with various "
+"widgets."
+msgstr ""
+
+#: customize/customizer.php:174
+msgid "Enable Fancy Scrollbar?"
+msgstr ""
+
+#: customize/customizer.php:175
+msgid "Whether to replace the default page scrollbar with a fancy scrollbar."
+msgstr ""
+
+#: customize/customizer.php:183
+msgid "Sticky Post Signature"
+msgstr ""
+
+#: customize/customizer.php:184
+msgid ""
+"Upload an image to include at the end of each sticky post, something like a "
+"signature.."
+msgstr ""
+
+#: customize/customizer.php:192
+msgid "Show Example Content?"
+msgstr ""
+
+#: customize/customizer.php:193
+msgid ""
+"Turning this off will disable all default/sample images for posts. It will "
+"also hide all default widgets in the Default Sidebar."
+msgstr ""
+
+#: customize/customizer.php:205
+msgid "Show Image Logo?"
+msgstr ""
+
+#: customize/customizer.php:206
+msgid "Choose whether to display the image logo."
+msgstr ""
+
+#: customize/customizer.php:210 customize/customizer.php:298
+#: customize/customizer.php:332 customize/customizer.php:419
+#: customize/customizer.php:514
+msgid "SHOW"
+msgstr "Mostra"
+
+#: customize/customizer.php:210 customize/customizer.php:298
+#: customize/customizer.php:332 customize/customizer.php:419
+#: customize/customizer.php:514
+msgid "HIDE"
+msgstr "Amaga"
+
+#: customize/customizer.php:215
+msgid "Text Logo"
+msgstr ""
+
+#: customize/customizer.php:216
+msgid ""
+"Displayed when `Show Image Logo?` is set to `Show` or if there is no logo "
+"image uploaded."
+msgstr ""
+
+#: customize/customizer.php:238
+msgid "Caption Heading"
+msgstr ""
+
+#: customize/customizer.php:247
+msgid "Caption Description"
+msgstr ""
+
+#: customize/customizer.php:256
+msgid "Caption URL"
+msgstr ""
+
+#: customize/customizer.php:270
+msgid "Show Color Overlay/Filter?"
+msgstr ""
+
+#: customize/customizer.php:279
+msgid "Select Color"
+msgstr ""
+
+#: customize/customizer.php:293
+msgid "Show midsection?"
+msgstr "Mostrar part mitjana"
+
+#: customize/customizer.php:294
+msgid "Choose whether to display the midsection."
+msgstr "Tria si mostrar la part mitjana"
+
+#: customize/customizer.php:303
+msgid "Midsection text"
+msgstr "Text a la part mitjana"
+
+#: customize/customizer.php:314
+msgid "Midsection picture"
+msgstr "Imatge a la part mitjana"
+
+#: customize/customizer.php:315
+msgid "Upload an image to include in the midsection"
+msgstr "Puja una imatge per a incloure a la part mitjana"
+
+#: customize/customizer.php:327
+msgid "Show Featured Posts?"
+msgstr ""
+
+#: customize/customizer.php:328
+msgid "Choose whether to display the featured posts."
+msgstr ""
+
+#: customize/customizer.php:337
+msgid "<hr />"
+msgstr ""
+
+#: customize/customizer.php:345
+msgid "Heading"
+msgstr ""
+
+#: customize/customizer.php:354
+msgid "Post 1"
+msgstr ""
+
+#: customize/customizer.php:364
+msgid "Post 2"
+msgstr ""
+
+#: customize/customizer.php:374
+msgid "Post 3"
+msgstr ""
+
+#: customize/customizer.php:384
+msgid "Post 4"
+msgstr ""
+
+#: customize/customizer.php:399 customize/customizer.php:483
+#: customize/customizer.php:562 customize/customizer.php:587
+msgid "Layout"
+msgstr ""
+
+#: customize/customizer.php:400
+msgid "Choose whether to display the sidebar on the home page."
+msgstr ""
+
+#: customize/customizer.php:414 customize/customizer.php:509
+msgid "Show Meta?"
+msgstr ""
+
+#: customize/customizer.php:415
+msgid ""
+"Choose whether to display date, category, author, tags for posts in the blog "
+"feed. This applies to all blog feeds on all pages, including the front page."
+msgstr ""
+
+#: customize/customizer.php:424 customize/customizer.php:519
+msgid "Show Date?"
+msgstr ""
+
+#: customize/customizer.php:433 customize/customizer.php:528
+msgid "Show Category?"
+msgstr ""
+
+#: customize/customizer.php:442 customize/customizer.php:537
+msgid "Show Author?"
+msgstr ""
+
+#: customize/customizer.php:451
+msgid "Show Comments?"
+msgstr ""
+
+#: customize/customizer.php:467
+msgid "Post Display Format"
+msgstr ""
+
+#: customize/customizer.php:473
+msgid "Image and Excerpt"
+msgstr ""
+
+#: customize/customizer.php:476
+msgid "Image and Full Content"
+msgstr ""
+
+#: customize/customizer.php:484
+msgid "Choose whether to display the sidebar on the blog feed pages."
+msgstr ""
+
+#: customize/customizer.php:495
+msgid "Heading for Blog Feed"
+msgstr ""
+
+#: customize/customizer.php:496
+msgid "The `Recent Posts` label for the blog feed."
+msgstr ""
+
+#: customize/customizer.php:510
+msgid ""
+"Choose whether to display date, category, author, tags for posts on the post "
+"page."
+msgstr ""
+
+#: customize/customizer.php:546
+msgid "Show Tags?"
+msgstr ""
+
+#: customize/customizer.php:563 customize/customizer.php:588
+msgid "Choose whether to display the sidebar."
+msgstr ""
+
+#: customize/customizer.php:573 customize/customizer.php:598
+msgid "Show Featured Image ?"
+msgstr ""
+
+#: customize/customizer.php:574
+msgid "Whether to show featured image at the beginning of the post."
+msgstr ""
+
+#: customize/customizer.php:599
+msgid "Whether to show featured image at the beginning of the page."
+msgstr ""
+
+#: customize/customizer.php:611
+msgid "Custom CSS"
+msgstr ""
+
+#: customize/customizer.php:612
+msgid "Custom CSS code to modify styling."
+msgstr ""
+
+#: customize/kirki-config.php:11
+msgid "Background Color"
+msgstr ""
+
+#: customize/kirki-config.php:12
+msgid "Background Image"
+msgstr ""
+
+#: customize/kirki-config.php:13
+msgid "No Repeat"
+msgstr ""
+
+#: customize/kirki-config.php:14
+msgid "Repeat All"
+msgstr ""
+
+#: customize/kirki-config.php:15
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: customize/kirki-config.php:16
+msgid "Repeat Vertically"
+msgstr ""
+
+#: customize/kirki-config.php:17
+msgid "Inherit"
+msgstr ""
+
+#: customize/kirki-config.php:18
+msgid "Background Repeat"
+msgstr ""
+
+#: customize/kirki-config.php:19
+msgid "Cover"
+msgstr ""
+
+#: customize/kirki-config.php:20
+msgid "Contain"
+msgstr ""
+
+#: customize/kirki-config.php:21
+msgid "Background Size"
+msgstr ""
+
+#: customize/kirki-config.php:22
+msgid "Fixed"
+msgstr ""
+
+#: customize/kirki-config.php:23
+msgid "Scroll"
+msgstr ""
+
+#: customize/kirki-config.php:24
+msgid "Background Attachment"
+msgstr ""
+
+#: customize/kirki-config.php:25
+msgid "Left Top"
+msgstr ""
+
+#: customize/kirki-config.php:26
+msgid "Left Center"
+msgstr ""
+
+#: customize/kirki-config.php:27
+msgid "Left Bottom"
+msgstr ""
+
+#: customize/kirki-config.php:28
+msgid "Right Top"
+msgstr ""
+
+#: customize/kirki-config.php:29
+msgid "Right Center"
+msgstr ""
+
+#: customize/kirki-config.php:30
+msgid "Right Bottom"
+msgstr ""
+
+#: customize/kirki-config.php:31
+msgid "Center Top"
+msgstr ""
+
+#: customize/kirki-config.php:32
+msgid "Center Center"
+msgstr ""
+
+#: customize/kirki-config.php:33
+msgid "Center Bottom"
+msgstr ""
+
+#: customize/kirki-config.php:34
+msgid "Background Position"
+msgstr ""
+
+#: customize/kirki-config.php:35
+msgid "Background Opacity"
+msgstr ""
+
+#: customize/kirki-config.php:36
+msgid "ON"
+msgstr ""
+
+#: customize/kirki-config.php:37
+msgid "OFF"
+msgstr ""
+
+#: customize/kirki-config.php:38
+msgid "All"
+msgstr ""
+
+#: customize/kirki-config.php:39
+msgid "Cyrillic"
+msgstr ""
+
+#: customize/kirki-config.php:40
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: customize/kirki-config.php:41
+msgid "Devanagari"
+msgstr ""
+
+#: customize/kirki-config.php:42
+msgid "Greek"
+msgstr ""
+
+#: customize/kirki-config.php:43
+msgid "Greek Extended"
+msgstr ""
+
+#: customize/kirki-config.php:44
+msgid "Khmer"
+msgstr ""
+
+#: customize/kirki-config.php:45
+msgid "Latin"
+msgstr ""
+
+#: customize/kirki-config.php:46
+msgid "Latin Extended"
+msgstr ""
+
+#: customize/kirki-config.php:47
+msgid "Vietnamese"
+msgstr ""
+
+#: customize/kirki-config.php:48
+msgid "Hebrew"
+msgstr ""
+
+#: customize/kirki-config.php:49
+msgid "Arabic"
+msgstr ""
+
+#: customize/kirki-config.php:50
+msgid "Bengali"
+msgstr ""
+
+#: customize/kirki-config.php:51
+msgid "Gujarati"
+msgstr ""
+
+#: customize/kirki-config.php:52
+msgid "Tamil"
+msgstr ""
+
+#: customize/kirki-config.php:53
+msgid "Telugu"
+msgstr ""
+
+#: customize/kirki-config.php:54
+msgid "Thai"
+msgstr ""
+
+#: customize/kirki-config.php:55
+msgid "Serif"
+msgstr ""
+
+#: customize/kirki-config.php:56
+msgid "Sans Serif"
+msgstr ""
+
+#: customize/kirki-config.php:57
+msgid "Monospace"
+msgstr ""
+
+#: customize/kirki-config.php:58
+msgid "Font Family"
+msgstr ""
+
+#: customize/kirki-config.php:59
+#, fuzzy
+#| msgid "Front Page"
+msgid "Font Size"
+msgstr "Pàgina principal"
+
+#: customize/kirki-config.php:60
+msgid "Font Weight"
+msgstr ""
+
+#: customize/kirki-config.php:61
+msgid "Line Height"
+msgstr ""
+
+#: customize/kirki-config.php:62
+#, fuzzy
+#| msgid "Front Page"
+msgid "Font Style"
+msgstr "Pàgina principal"
+
+#: customize/kirki-config.php:63
+msgid "Letter Spacing"
+msgstr ""
+
+#: customize/kirki-config.php:64
+msgid "Top"
+msgstr ""
+
+#: customize/kirki-config.php:65
+msgid "Bottom"
+msgstr ""
+
+#: customize/kirki-config.php:66
+msgid "Left"
+msgstr ""
+
+#: customize/kirki-config.php:67
+msgid "Right"
+msgstr ""
+
+#: customize/kirki-config.php:68
+msgid "Color"
+msgstr ""
+
+#: customize/kirki-config.php:69
+msgid "Add Image"
+msgstr ""
+
+#: customize/kirki-config.php:70
+msgid "Change Image"
+msgstr ""
+
+#: customize/kirki-config.php:71
+msgid "Remove"
+msgstr ""
+
+#: customize/kirki-config.php:72
+msgid "No Image Selected"
+msgstr ""
+
+#: customize/kirki-config.php:73
+msgid "Select a font-family"
+msgstr ""
+
+#: customize/kirki-config.php:74
+msgid "Variant"
+msgstr ""
+
+#: customize/kirki-config.php:75
+msgid "Subset"
+msgstr ""
+
+#: customize/kirki-config.php:76
+msgid "Size"
+msgstr ""
+
+#: customize/kirki-config.php:77
+msgid "Height"
+msgstr ""
+
+#: customize/kirki-config.php:78
+msgid "Spacing"
+msgstr ""
+
+#: customize/kirki-config.php:79
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: customize/kirki-config.php:80
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:81
+msgid "Light 200"
+msgstr ""
+
+#: customize/kirki-config.php:82
+msgid "Light 200 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:83
+msgid "Book 300"
+msgstr ""
+
+#: customize/kirki-config.php:84
+msgid "Book 300 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:85
+msgid "Normal 400"
+msgstr ""
+
+#: customize/kirki-config.php:86
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:87
+msgid "Medium 500"
+msgstr ""
+
+#: customize/kirki-config.php:88
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:89
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: customize/kirki-config.php:90
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:91
+msgid "Bold 700"
+msgstr ""
+
+#: customize/kirki-config.php:92
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:93
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: customize/kirki-config.php:94
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:95
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: customize/kirki-config.php:96
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: customize/kirki-config.php:97
+msgid "Invalid Value"
+msgstr ""
+
+#: customize/theme-defaults.php:12
+msgid "Copyright &copy; "
+msgstr ""
+
+#: customize/theme-defaults.php:50 functions.php:418
+msgid "Recent Posts"
+msgstr ""
+
+#: functions.php:22
+msgid "Custom Colors"
+msgstr ""
+
+#: functions.php:40
+msgid "Main Menu"
+msgstr ""
+
+#: functions.php:41 widgets/widgets.php:118
+msgid "Off Canvas Menu"
+msgstr ""
+
+#: functions.php:206
+msgid "Recent Posts Widget With Thumbnails"
+msgstr ""
+
+#: functions.php:416
+msgid "Search"
+msgstr ""
+
+#: functions.php:419
+msgid "Archives"
+msgstr ""
+
+#: functions.php:420
+msgid "Categories"
+msgstr ""
+
+#: header.php:96
+msgid "Toggle Navigation"
+msgstr ""
+
+#: page.php:25 template-full.php:32
+msgid "Page ID: "
+msgstr ""
+
+#: parts/entry-alt.php:35 parts/entry.php:41 single.php:39
+msgid "Post ID: "
+msgstr ""
+
+#: parts/entry.php:57 single.php:48
+msgid "by "
+msgstr ""
+
+#: parts/entry.php:60
+msgid "1 Comment"
+msgstr ""
+
+#: parts/feed.php:31
+msgid "No posts found."
+msgstr ""
+
+#: parts/feed.php:35
+msgid "Previous Posts"
+msgstr ""
+
+#: parts/feed.php:36
+msgid "Next Posts"
+msgstr ""
+
+#: sidebar-footer.php:49
+msgid "Juliet"
+msgstr ""
+
+#: sidebar-footer.php:49
+msgid "by LyraThemes.com"
+msgstr ""
+
+#: widgets/widgets.php:15
+msgid "Sidebar - Default"
+msgstr ""
+
+#: widgets/widgets.php:24
+msgid "Sidebar - Front Page"
+msgstr ""
+
+#: widgets/widgets.php:33
+msgid "Sidebar - Post"
+msgstr ""
+
+#: widgets/widgets.php:42
+msgid "Sidebar - Page"
+msgstr ""
+
+#: widgets/widgets.php:54
+msgid "Header - Left"
+msgstr ""
+
+#: widgets/widgets.php:56
+msgid "Add widgets here to appear in the top left area."
+msgstr ""
+
+#: widgets/widgets.php:63
+msgid "Header - Right"
+msgstr ""
+
+#: widgets/widgets.php:65
+msgid "Add widgets here to appear in the top right area."
+msgstr ""
+
+#: widgets/widgets.php:75
+msgid "Footer - Col 1"
+msgstr ""
+
+#: widgets/widgets.php:83
+msgid "Footer - Col 2"
+msgstr ""
+
+#: widgets/widgets.php:91
+msgid "Footer - Col 3"
+msgstr ""
+
+#: widgets/widgets.php:99
+msgid "Footer - Col 4"
+msgstr ""
+
+#: widgets/widgets.php:108
+msgid "Footer - Last"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:33
+msgid "Return to shop"
+msgstr "Torna a la botiga"
+
+#: woocommerce/cart/cart-shipping.php:48
+msgid "Shipping costs will be calculated once you have provided your address."
+msgstr ""
+"Els costos de l'enviament es calcularan quan sapiguem la direcció "
+"d'enviament "
+
+#: woocommerce/cart/cart-shipping.php:50
+msgid ""
+"There are no shipping methods available. Please double check your address, "
+"or contact us if you need any help."
+msgstr ""
+"Cap mètode d'enviament disponible. Si us plau, torni a comprovar la seva "
+"direcció, o contacti amb nosaltres si necessita ajuda."
+
+#: woocommerce/cart/cart-totals.php:31 woocommerce/cart/mini-cart.php:71
+#: woocommerce/checkout/review-order.php:59
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: woocommerce/cart/cart-totals.php:53
+msgid "Shipping"
+msgstr "Enviament"
+
+#: woocommerce/cart/cart-totals.php:69
+#, php-format
+msgid "(estimated for %s)"
+msgstr ""
+
+#: woocommerce/cart/cart-totals.php:90 woocommerce/cart/cart.php:38
+#: woocommerce/cart/cart.php:119 woocommerce/checkout/review-order.php:27
+#: woocommerce/checkout/review-order.php:106
+msgid "Total"
+msgstr ""
+
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:78
+#: woocommerce/checkout/form-pay.php:29
+#: woocommerce/checkout/review-order.php:26
+msgid "Product"
+msgstr "producte"
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:96
+msgid "Price"
+msgstr "Preu"
+
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:102
+msgid "Quantity"
+msgstr "Quantitat"
+
+#: woocommerce/cart/cart.php:59 woocommerce/cart/mini-cart.php:47
+msgid "Remove this item"
+msgstr "Treure l'article"
+
+#: woocommerce/cart/cart.php:91
+msgid "Available on backorder"
+msgstr "Disponible com a reserva"
+
+#: woocommerce/cart/cart.php:137
+msgid "Coupon:"
+msgstr "Cupó"
+
+#: woocommerce/cart/cart.php:137 woocommerce/checkout/form-coupon.php:36
+#, fuzzy
+#| msgid "Coupon:"
+msgid "Coupon code"
+msgstr "Cupó"
+
+#: woocommerce/cart/cart.php:137 woocommerce/checkout/form-coupon.php:40
+msgid "Apply coupon"
+msgstr ""
+
+#: woocommerce/cart/cart.php:142
+#, fuzzy
+#| msgid "Update totals"
+msgid "Update cart"
+msgstr "Actualitzar totals"
+
+#: woocommerce/cart/cross-sells.php:27
+msgid "You may be interested in&hellip;"
+msgstr "Potser esteu interessats en això&hellip;"
+
+#: woocommerce/cart/mini-cart.php:79
+msgid "No products in the cart."
+msgstr "No hi ha productes al carret."
+
+#: woocommerce/cart/proceed-to-checkout-button.php:27
+msgid "Proceed to checkout"
+msgstr "Finalitzar la compra"
+
+#: woocommerce/cart/shipping-calculator.php:33
+msgid "Calculate shipping"
+msgstr "Calcular enviament"
+
+#: woocommerce/cart/shipping-calculator.php:39
+#: woocommerce/functions_woocommerce.php:188
+msgid "Select a country&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:56
+#: woocommerce/cart/shipping-calculator.php:62
+#: woocommerce/cart/shipping-calculator.php:74
+msgid "State / County"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:63
+#: woocommerce/functions_woocommerce.php:217
+msgid "Select a state&hellip;"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:83
+msgid "City"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:91
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: woocommerce/cart/shipping-calculator.php:96
+#: woocommerce/checkout/payment.php:42
+msgid "Update totals"
+msgstr "Actualitzar totals"
+
+#: woocommerce/checkout/cart-errors.php:27
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+"Hi ha alguns inconvenients amb els articles del vostre carret (es mostren a "
+"dalt). Sisplau, comproveu-ho bé abans de finalitzar la compra."
+
+#: woocommerce/checkout/cart-errors.php:31
+msgid "Return to cart"
+msgstr "&larr; Tornar al carret"
+
+#: woocommerce/checkout/form-billing.php:29
+msgid "Billing &amp; Shipping"
+msgstr "Facturació &amp; Enviaments"
+
+#: woocommerce/checkout/form-billing.php:33
+msgid "Billing details"
+msgstr "Detalls  de facturació"
+
+#: woocommerce/checkout/form-billing.php:61
+msgid "Create an account?"
+msgstr "Crear un nou compte"
+
+#: woocommerce/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr "Heu d'iniciar sessió per poder finalitzar la comanda."
+
+#: woocommerce/checkout/form-checkout.php:60
+msgid "Your order"
+msgstr "La vostra comanda"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Have a coupon?"
+msgstr "Teniu un cupó?"
+
+#: woocommerce/checkout/form-coupon.php:28
+msgid "Click here to enter your code"
+msgstr "Clic aquí per posar el codi"
+
+#: woocommerce/checkout/form-login.php:27
+msgid "Returning customer?"
+msgstr "Ja heu comprat abans?"
+
+#: woocommerce/checkout/form-login.php:28
+msgid "Click here to login"
+msgstr "Feu clic aquí per iniciar sessió"
+
+#: woocommerce/checkout/form-login.php:33
+msgid ""
+"If you have shopped with us before, please enter your details in the boxes "
+"below. If you are a new customer, please proceed to the Billing &amp; "
+"Shipping section."
+msgstr ""
+"Si ja sou clients nostres, sisplau, introduïu el vostre usuari i contrasenya "
+"a continuació. Si és la primera vegada que compreu aquí, ompliu els camps "
+"corresponents a l'adreça de facturació i d'enviament."
+
+#: woocommerce/checkout/form-pay.php:30
+msgid "Qty"
+msgstr "Quant."
+
+#: woocommerce/checkout/form-pay.php:31
+msgid "Totals"
+msgstr "Totals"
+
+#: woocommerce/checkout/form-pay.php:81
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Ho sentim, sembla ser que no hi ha cap sistema de pagament disponible per a "
+"la vostra localitat. Sisplau, poseu-vos en contacte amb nosaltres si "
+"necessiteu ajuda o bé si voleu alguna alternativa."
+
+#: woocommerce/checkout/form-shipping.php:29
+msgid "Ship to a different address?"
+msgstr "Enviar a l'adreça de facturació?"
+
+#: woocommerce/checkout/form-shipping.php:63
+msgid "Additional information"
+msgstr "Informació addicional"
+
+#: woocommerce/checkout/payment.php:35
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Ho sentim, sembla ser que no hi ha mètodes disponibles de pagament per a la "
+"vostra ubicació. Sisplau, poseu-vos en contacte amb nosaltres si necessiteu "
+"ajuda o bé si voleu una alternativa."
+
+#: woocommerce/checkout/payment.php:35
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Sisplau, introduïu les vostres dades per veure els mètodes de pagament "
+"disponibles."
+
+#: woocommerce/checkout/terms.php:26
+#, php-format
+msgid ""
+"I&rsquo;ve read and accept the <a href=\"%s\" class=\"woocommerce-terms-and-"
+"conditions-link\">terms &amp; conditions</a>"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:30
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:33
+msgid "Pay"
+msgstr "Pagar"
+
+#: woocommerce/checkout/thankyou.php:35
+msgid "My account"
+msgstr "El meu compte"
+
+#: woocommerce/checkout/thankyou.php:42
+msgid "<h2>Thank you!</h2> <p>Your order has been received.</p>"
+msgstr "<h2>Gr&aacute;cies!</h2> <p>Hem rebut la vostra comanda.</p> "
+
+#: woocommerce/checkout/thankyou.php:49
+msgid "Order number:"
+msgstr "Número d'ordre"
+
+#: woocommerce/checkout/thankyou.php:54
+msgid "Date:"
+msgstr "Data:"
+
+#: woocommerce/checkout/thankyou.php:59
+msgid "Delivery date:"
+msgstr "Data d'entrega"
+
+#: woocommerce/checkout/thankyou.php:64
+msgid "Total:"
+msgstr "Total:"
+
+#: woocommerce/checkout/thankyou.php:71
+msgid "Payment method:"
+msgstr "Métode de pagament:"
+
+#: woocommerce/checkout/thankyou.php:91
+msgid "<h2>Thank you.</h2> <p>Your order has been received.</p>"
+msgstr "<h2>Gr&aacute;cies.</h2> <p>Hem rebut la vostra comanda.</p> "
+
+#: woocommerce/functions_woocommerce.php:13
+msgid "Home"
+msgstr "Inici"
+
+#: woocommerce/functions_woocommerce.php:89
+msgid "No image"
+msgstr "Sense imatge"
+
+#: woocommerce/functions_woocommerce.php:129
+msgid "required"
+msgstr ""
+
+#: woocommerce/functions_woocommerce.php:196
+#, fuzzy
+#| msgid "Update totals"
+msgid "Update country"
+msgstr "Actualitzar totals"
+
+#: woocommerce/functions_woocommerce.php:262
+msgid "Choose an option"
+msgstr "Escollir una opció"
+
+#: woocommerce/loop/result-count.php:41 woocommerce/loop/result-count.php:44
+msgid "Showing the single result"
+msgstr "Mostrant un únic resultat"
+
+#: woocommerce/loop/sale-flash.php:28
+#: woocommerce/single-product/sale-flash.php:28
+msgid "Sale Price"
+msgstr "Preu de liquidació"
+
+#: woocommerce/single-product-reviews.php:34
+#, php-format
+msgid "%1$s review for %2$s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:36
+msgid "Reviews"
+msgstr "Opinions"
+
+#: woocommerce/single-product-reviews.php:58
+msgid "There are no reviews yet."
+msgstr ""
+"Encara no hi ha valoracions; t'agradaria <a href=\"#review_form\" class="
+"\"inline show_review_form\"> deixar la teva opinió</a>?"
+
+#: woocommerce/single-product-reviews.php:70
+msgid "Your rating"
+msgstr "La vostra qualificació"
+
+#: woocommerce/single-product-reviews.php:71
+msgid "Rate&hellip;"
+msgstr "Valora&hellip;"
+
+#: woocommerce/single-product-reviews.php:72
+msgid "Perfect"
+msgstr "Perfecte"
+
+#: woocommerce/single-product-reviews.php:73
+msgid "Good"
+msgstr "Bo"
+
+#: woocommerce/single-product-reviews.php:74
+msgid "Average"
+msgstr "Normal"
+
+#: woocommerce/single-product-reviews.php:75
+msgid "Not that bad"
+msgstr "No està malament"
+
+#: woocommerce/single-product-reviews.php:76
+msgid "Very poor"
+msgstr "Molt pobre"
+
+#: woocommerce/single-product-reviews.php:83
+msgid "Your review"
+msgstr "La teva opinió"
+
+#: woocommerce/single-product-reviews.php:96
+msgid "Add a review"
+msgstr "Afegir opinió"
+
+#: woocommerce/single-product-reviews.php:97
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:114
+msgid "Submit"
+msgstr "Enviar"
+
+#: woocommerce/single-product-reviews.php:120
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:130
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/single-product/meta.php:31
+msgid "SKU:"
+msgstr "SKU del producte: "
+
+#: woocommerce/single-product/meta.php:31
+msgid "N/A"
+msgstr "N/A"
+
+#: woocommerce/single-product/product-image.php:54
+msgid "Awaiting product image"
+msgstr ""
+
+#: woocommerce/single-product/related.php:29
+msgid "Related products"
+msgstr "Productes relacionats"
+
+#: woocommerce/single-product/review-meta.php:28
+msgid "Your review is awaiting approval"
+msgstr ""
+
+#: woocommerce/single-product/review-meta.php:36
+msgid "verified owner"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:25
+msgid "Description"
+msgstr "Detalls"

@@ -34,6 +34,10 @@ $juliet_defaults['juliet_frontpage_featured_posts_post_2']  = 1;
 $juliet_defaults['juliet_frontpage_featured_posts_post_3']  = 1;
 $juliet_defaults['juliet_frontpage_featured_posts_post_4']  = 1;
 
+$juliet_defaults['juliet_frontpage_midsection_show']        = '1'; 
+$juliet_defaults['juliet_frontpage_midsection_text']        = 'Afegeix text'; 
+$juliet_defaults['juliet_frontpage_midsection_picture']     = esc_url( get_template_directory_uri() ) . '/sample/images/thumb1.jpg';
+
 $juliet_defaults['juliet_frontpage_blog_feed_sidebar']      = '1';
 
 $juliet_defaults['juliet_blog_feed_meta_show']              = 1;

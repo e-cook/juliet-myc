@@ -12,6 +12,10 @@ $juliet_blog_feed_category_show = juliet_get_option('juliet_blog_feed_category_s
 $juliet_blog_feed_author_show = juliet_get_option('juliet_blog_feed_author_show');
 $juliet_blog_feed_comments_show = juliet_get_option('juliet_blog_feed_comments_show');
 $juliet_blog_feed_post_format = juliet_get_option('juliet_blog_feed_post_format');
+global $post;
+error_log("post name: " . $post->post_name);
+if ( 'bloc' == $post->post_name ||
+     'receptes' == $post->post_name ) {
 ?>
 
 <!-- Blog Feed -->
@@ -22,16 +26,17 @@ $juliet_blog_feed_post_format = juliet_get_option('juliet_blog_feed_post_format'
     <?php 
     if ( have_posts() ) { 
         while ( have_posts() ) : the_post(); 
-            include(locate_template('parts/entry.php'));
+        include(locate_template('parts/entry.php'));
         endwhile;
     } else { ?><div class="blog-feed-empty"><p><?php esc_html_e('No posts found.', 'juliet'); ?></p></div><?php } ?>
     
     <?php if(get_next_posts_link() || get_previous_posts_link()) { ?>
-    <div class="pagination-blog-feed">
-        <?php if( get_next_posts_link() ) { ?><div class="previous_posts"><?php next_posts_link( esc_html__('Previous Posts', 'juliet') ); ?></div><?php } ?>
-        <?php if( get_previous_posts_link() ) { ?><div class="next_posts"><?php previous_posts_link( esc_html__('Next Posts', 'juliet') ); ?></div><?php } ?>
-    </div>
+	<div class="pagination-blog-feed">
+            <?php if( get_next_posts_link() ) { ?><div class="previous_posts"><?php next_posts_link( esc_html__('Previous Posts', 'juliet') ); ?></div><?php } ?>
+            <?php if( get_previous_posts_link() ) { ?><div class="next_posts"><?php previous_posts_link( esc_html__('Next Posts', 'juliet') ); ?></div><?php } ?>
+	</div>
     <?php } ?>
 
 </div>
 <!-- /Blog Feed -->
+<?php } ?>

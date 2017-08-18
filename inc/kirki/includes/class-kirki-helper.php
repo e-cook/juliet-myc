@@ -136,6 +136,12 @@ if ( ! class_exists( 'Kirki_Helper' ) ) {
 				$items[ $post->ID ] = $post->post_title;
 			}
 
+		    $pages = get_pages( $args );
+
+			foreach ( $pages as $page ) {
+			    $items[ $page->ID ] = $page->post_title;
+			}
+		    
 			return $items;
 
 		}

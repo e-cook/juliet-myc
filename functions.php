@@ -368,7 +368,7 @@ add_filter( 'get_the_archive_title', 'juliet_archive_title' );
 function juliet_default_nav(){
 	echo '<div class="navbar-collapse collapse">';
     echo '<ul class="nav navbar-nav">';
-    $pages = get_pages();  
+    $pages = get_pages();
     $n = count($pages); 
     $i=0;
     foreach ( $pages as $page ) {
