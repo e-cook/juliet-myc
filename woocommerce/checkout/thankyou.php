@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		    <li>
 			- <?php _e( 'Delivery date:', 'juliet' ); ?>
-			<strong><?php echo date('l, F j Y', strtotime( get_post_meta( $order->get_id(), '_delivery_date', true ) ) ); ?></strong>
+			<strong><?php echo wc_format_datetime( new WC_DateTime( get_post_meta( $order->get_id(), '_delivery_date', true ) ) ); ?></strong>
 		    </li>
 
                     <li>
