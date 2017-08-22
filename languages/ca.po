@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-08-18 16:18+0200\n"
-"PO-Revision-Date: 2017-08-18 16:20+0200\n"
+"POT-Creation-Date: 2017-08-21 18:48+0200\n"
+"PO-Revision-Date: 2017-08-21 18:49+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: 404.php:18
 msgid "404"
-msgstr ""
+msgstr "Error 404"
 
 #: 404.php:19
 msgid "Page Not Found"
@@ -40,7 +40,7 @@ msgstr ""
 
 #: comments.php:20
 msgid "Comment"
-msgstr ""
+msgstr "Valoració"
 
 #: comments.php:36
 #, php-format
@@ -174,7 +174,7 @@ msgstr ""
 
 #: customize/customizer.php:156 customize/customizer.php:304
 msgid "Accepts HTML."
-msgstr "Es pot escriure en HTML"
+msgstr "Es pot escriure en HTML."
 
 #: customize/customizer.php:165
 msgid "Enable Off Canvas Menu?"
@@ -266,11 +266,11 @@ msgstr ""
 
 #: customize/customizer.php:293
 msgid "Show midsection?"
-msgstr "Mostrar part mitjana"
+msgstr "Mostrar part mitjana?"
 
 #: customize/customizer.php:294
 msgid "Choose whether to display the midsection."
-msgstr "Tria si mostrar la part mitjana"
+msgstr "Tria si mostrar la part mitjana."
 
 #: customize/customizer.php:303
 msgid "Midsection text"
@@ -602,10 +602,8 @@ msgid "Font Family"
 msgstr ""
 
 #: customize/kirki-config.php:59
-#, fuzzy
-#| msgid "Front Page"
 msgid "Font Size"
-msgstr "Pàgina principal"
+msgstr "Mesura de tipus de lletra"
 
 #: customize/kirki-config.php:60
 msgid "Font Weight"
@@ -616,10 +614,8 @@ msgid "Line Height"
 msgstr ""
 
 #: customize/kirki-config.php:62
-#, fuzzy
-#| msgid "Front Page"
 msgid "Font Style"
-msgstr "Pàgina principal"
+msgstr "Estile de lletra"
 
 #: customize/kirki-config.php:63
 msgid "Letter Spacing"
@@ -815,19 +811,19 @@ msgstr ""
 
 #: parts/entry.php:60
 msgid "1 Comment"
-msgstr ""
+msgstr "Una valoració"
 
 #: parts/feed.php:31
 msgid "No posts found."
-msgstr ""
+msgstr "Sense entrades."
 
 #: parts/feed.php:35
 msgid "Previous Posts"
-msgstr ""
+msgstr "Entrades anteriors"
 
 #: parts/feed.php:36
 msgid "Next Posts"
-msgstr ""
+msgstr "Entrades següents"
 
 #: sidebar-footer.php:49
 msgid "Juliet"
@@ -897,7 +893,7 @@ msgstr "Torna a la botiga"
 msgid "Shipping costs will be calculated once you have provided your address."
 msgstr ""
 "Els costos de l'enviament es calcularan quan sapiguem la direcció "
-"d'enviament "
+"d'enviament."
 
 #: woocommerce/cart/cart-shipping.php:50
 msgid ""
@@ -924,14 +920,16 @@ msgstr ""
 #: woocommerce/cart/cart-totals.php:90 woocommerce/cart/cart.php:38
 #: woocommerce/cart/cart.php:119 woocommerce/checkout/review-order.php:27
 #: woocommerce/checkout/review-order.php:106
+#: woocommerce/order/order-details.php:40
 msgid "Total"
 msgstr ""
 
 #: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:78
 #: woocommerce/checkout/form-pay.php:29
 #: woocommerce/checkout/review-order.php:26
+#: woocommerce/order/order-details.php:39
 msgid "Product"
-msgstr "producte"
+msgstr "Producte"
 
 #: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:96
 msgid "Price"
@@ -951,23 +949,19 @@ msgstr "Disponible com a reserva"
 
 #: woocommerce/cart/cart.php:137
 msgid "Coupon:"
-msgstr "Cupó"
+msgstr "Cupó:"
 
 #: woocommerce/cart/cart.php:137 woocommerce/checkout/form-coupon.php:36
-#, fuzzy
-#| msgid "Coupon:"
 msgid "Coupon code"
-msgstr "Cupó"
+msgstr "Codi de cupó"
 
 #: woocommerce/cart/cart.php:137 woocommerce/checkout/form-coupon.php:40
 msgid "Apply coupon"
 msgstr ""
 
 #: woocommerce/cart/cart.php:142
-#, fuzzy
-#| msgid "Update totals"
 msgid "Update cart"
-msgstr "Actualitzar totals"
+msgstr "Actualitzar cesta"
 
 #: woocommerce/cart/cross-sells.php:27
 msgid "You may be interested in&hellip;"
@@ -1036,7 +1030,7 @@ msgstr "Detalls  de facturació"
 
 #: woocommerce/checkout/form-billing.php:61
 msgid "Create an account?"
-msgstr "Crear un nou compte"
+msgstr "Crear un nou compte?"
 
 #: woocommerce/checkout/form-checkout.php:29
 msgid "You must be logged in to checkout."
@@ -1137,11 +1131,11 @@ msgstr "El meu compte"
 
 #: woocommerce/checkout/thankyou.php:42
 msgid "<h2>Thank you!</h2> <p>Your order has been received.</p>"
-msgstr "<h2>Gr&aacute;cies!</h2> <p>Hem rebut la vostra comanda.</p> "
+msgstr "<h2>Gr&aacute;cies!</h2> <p>Hem rebut la vostra comanda.</p>"
 
 #: woocommerce/checkout/thankyou.php:49
 msgid "Order number:"
-msgstr "Número d'ordre"
+msgstr "Número de comanda:"
 
 #: woocommerce/checkout/thankyou.php:54
 msgid "Date:"
@@ -1149,7 +1143,7 @@ msgstr "Data:"
 
 #: woocommerce/checkout/thankyou.php:59
 msgid "Delivery date:"
-msgstr "Data d'entrega"
+msgstr "Data d'entrega:"
 
 #: woocommerce/checkout/thankyou.php:64
 msgid "Total:"
@@ -1161,7 +1155,7 @@ msgstr "Métode de pagament:"
 
 #: woocommerce/checkout/thankyou.php:91
 msgid "<h2>Thank you.</h2> <p>Your order has been received.</p>"
-msgstr "<h2>Gr&aacute;cies.</h2> <p>Hem rebut la vostra comanda.</p> "
+msgstr "<h2>Gr&aacute;cies.</h2> <p>Hem rebut la vostra comanda.</p>"
 
 #: woocommerce/functions_woocommerce.php:13
 msgid "Home"
@@ -1176,10 +1170,8 @@ msgid "required"
 msgstr ""
 
 #: woocommerce/functions_woocommerce.php:196
-#, fuzzy
-#| msgid "Update totals"
 msgid "Update country"
-msgstr "Actualitzar totals"
+msgstr "Actualitzar pais"
 
 #: woocommerce/functions_woocommerce.php:262
 msgid "Choose an option"
@@ -1193,6 +1185,40 @@ msgstr "Mostrant un únic resultat"
 #: woocommerce/single-product/sale-flash.php:28
 msgid "Sale Price"
 msgstr "Preu de liquidació"
+
+#: woocommerce/order/order-details-item.php:51
+msgid "Add comment"
+msgstr "Valora aquest producte"
+
+#: woocommerce/order/order-details-item.php:66
+msgid "How did you like it?"
+msgstr "Li ha agradat?"
+
+#: woocommerce/order/order-details-item.php:80
+msgid "Repeat meal"
+msgstr "Tornaria a demanar aquest plat"
+
+#: woocommerce/order/order-details-item.php:83
+msgid "Would you like a variation? What kind?"
+msgstr "Seria interessant variar aquest plat? De quina manera?"
+
+#: woocommerce/order/order-details-item.php:86
+msgid "How can we improve this dish?"
+msgstr ""
+"De quina manera podem millorar aquest plat? Comparti la seva experiència:"
+
+#: woocommerce/order/order-details.php:32
+msgid "Order details"
+msgstr "Detalls de comanda"
+
+#: woocommerce/order/order-details.php:41
+msgid "Comments"
+msgstr "Valoracions"
+
+#: woocommerce/order/order-details.php:42
+#: woocommerce/single-product-reviews.php:114
+msgid "Submit"
+msgstr "Enviar"
 
 #: woocommerce/single-product-reviews.php:34
 #, php-format
@@ -1250,10 +1276,6 @@ msgstr "Afegir opinió"
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: woocommerce/single-product-reviews.php:114
-msgid "Submit"
-msgstr "Enviar"
-
 #: woocommerce/single-product-reviews.php:120
 #, php-format
 msgid "You must be <a href=\"%s\">logged in</a> to post a review."
@@ -1263,14 +1285,6 @@ msgstr ""
 msgid ""
 "Only logged in customers who have purchased this product may leave a review."
 msgstr ""
-
-#: woocommerce/single-product/meta.php:31
-msgid "SKU:"
-msgstr "SKU del producte: "
-
-#: woocommerce/single-product/meta.php:31
-msgid "N/A"
-msgstr "N/A"
 
 #: woocommerce/single-product/product-image.php:54
 msgid "Awaiting product image"
@@ -1291,3 +1305,12 @@ msgstr ""
 #: woocommerce/single-product/tabs/description.php:25
 msgid "Description"
 msgstr "Detalls"
+
+#~ msgid "Tell us about your experience"
+#~ msgstr "Fes-ens arribar la vostra experiència:"
+
+#~ msgid "SKU:"
+#~ msgstr "SKU del producte: "
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
