@@ -91,6 +91,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	     product_ids: <?php echo php_array_2_js( $order_item_product_ids ); ?>,
 	     _nonce: '<?php echo wp_create_nonce( 'myc_read_order_comments' ) ?>'
 	 }, function( response ) {
+	     alert("response: " + JSON.stringify(response));
 	     var props_of = JSON.parse( response );
 	     for ( var product_id in props_of ) {
 		 jQuery( '#star-' + props_of[ product_id ][ 'star' ] + '-' + product_id ).attr( 'checked', true );
