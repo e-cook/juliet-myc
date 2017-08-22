@@ -8,7 +8,6 @@
 <?php get_header(); ?>
 
 <?php 
-error_log("juliet index.php");
 $show_sidebar = false;
 if(is_front_page() && !is_paged() ) {
     $juliet_frontpage_blog_feed_sidebar = juliet_get_option('juliet_frontpage_blog_feed_sidebar');

@@ -104,7 +104,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	 
 	 jQuery.post( ajaxurl, {
 	     action: 'myc_read_order_comments',
-	     product_ids: <?php echo php_array_2_js( $order_item_product_ids ); ?>,
+	     product_ids: <?php echo local_php_array_2_js( $order_item_product_ids ); ?>,
 	     _nonce: '<?php echo wp_create_nonce( 'myc_read_order_comments' ) ?>'
 	 }, function( response ) {
 	     alert("response: " + JSON.stringify(response));
