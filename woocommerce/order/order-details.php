@@ -100,14 +100,14 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	 jQuery( '.order-comment-item' ).on( 'input' , function() {
 	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
 	 });
-	 alert('disabled button');
-/*	 
+	 alert('disabled button');	 
 	 jQuery.post( ajaxurl, {
 	     action: 'myc_read_order_comments',
 	     product_ids: <?php echo local_php_array_2_js( $order_item_product_ids ); ?>,
 	     _nonce: '<?php echo wp_create_nonce( 'myc_read_order_comments' ) ?>'
 	 }, function( response ) {
 	     alert("response: " + JSON.stringify(response));
+/*
 	     var props_of = JSON.parse( response );
 	     for ( var product_id in props_of ) {
 		 jQuery( '#star-' + props_of[ product_id ][ 'star' ] + '-' + product_id ).attr( 'checked', true );
@@ -117,9 +117,9 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 		 jQuery( '#variation-' + product_id ).val( props_of[ product_id ][ 'variation' ] );
 		 jQuery( '#comment_content-' + product_id ).text( props_of[ product_id ][ 'comment_content' ] );
 	     }
+*/
 	 });
 	 alert('posted question');
-*/
 	 jQuery( '#order-comments-form' ).submit( function( event ) {
 	     var postData = jQuery( this ).serializeArray();
 	     event.preventDefault();
