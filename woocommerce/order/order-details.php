@@ -100,7 +100,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	 jQuery( '.order-comment-item' ).on( 'input' , function() {
 	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
 	 });
-	 alert('disabled button');	 
+	 alert('disabled button, ajaxurl=' + ajaxurl);	 
 	 jQuery.post( ajaxurl, {
 	     action: 'myc_read_order_comments',
 	 }, function( response ) {
