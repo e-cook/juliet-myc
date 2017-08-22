@@ -80,12 +80,28 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	</table>
     </form>
 
+    <?php
+    function local_php_array_2_js( $arr ) {
+	$js_arr = '[';
+	$ct = 0;
+	foreach ( $arr as $a ) {
+	    if ( $ct > 0 ) {
+		$js_arr .= ',';
+	    } else {
+		$ct = 1;
+	    }
+	    $js_arr .= '"' . $a . '"';
+	}
+	return $js_arr . ']';
+    }
+    ?>
     <script type="text/javascript">
      jQuery(document).ready(function() {
 	 jQuery( '.order-comment-item' ).on( 'input' , function() {
 	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
 	 });
 	 alert('disabled button');
+	 
 	 jQuery.post( ajaxurl, {
 	     action: 'myc_read_order_comments',
 	     product_ids: <?php echo php_array_2_js( $order_item_product_ids ); ?>,
