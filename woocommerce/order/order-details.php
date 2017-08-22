@@ -101,7 +101,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
 	 });
 	 alert('disabled button');
-	 
+/*	 
 	 jQuery.post( ajaxurl, {
 	     action: 'myc_read_order_comments',
 	     product_ids: <?php echo local_php_array_2_js( $order_item_product_ids ); ?>,
@@ -119,6 +119,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	     }
 	 });
 	 alert('posted question');
+*/
 	 jQuery( '#order-comments-form' ).submit( function( event ) {
 	     var postData = jQuery( this ).serializeArray();
 	     event.preventDefault();
