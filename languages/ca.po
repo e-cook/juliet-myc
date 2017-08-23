@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-08-21 18:48+0200\n"
-"PO-Revision-Date: 2017-08-21 18:49+0200\n"
+"POT-Creation-Date: 2017-08-23 12:01+0200\n"
+"PO-Revision-Date: 2017-08-23 12:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -1121,7 +1121,7 @@ msgid ""
 "merchant has declined your transaction. Please attempt your purchase again."
 msgstr ""
 
-#: woocommerce/checkout/thankyou.php:33
+#: woocommerce/checkout/thankyou.php:33 woocommerce/myaccount/orders.php:71
 msgid "Pay"
 msgstr "Pagar"
 
@@ -1186,6 +1186,41 @@ msgstr "Mostrant un únic resultat"
 msgid "Sale Price"
 msgstr "Preu de liquidació"
 
+#: woocommerce/myaccount/orders.php:51
+msgid "#"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:63
+#, php-format
+msgid "%1$s for %2$s item"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:75
+msgid "Rate"
+msgstr "Valora"
+
+#: woocommerce/myaccount/orders.php:79
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:110
+#, fuzzy
+#| msgid "Previous Posts"
+msgid "Previous"
+msgstr "Entrades anteriors"
+
+#: woocommerce/myaccount/orders.php:114
+msgid "Next"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:122
+msgid "Go shop"
+msgstr ""
+
+#: woocommerce/myaccount/orders.php:124
+msgid "No order has been made yet."
+msgstr ""
+
 #: woocommerce/order/order-details-item.php:51
 msgid "Add comment"
 msgstr "Valora aquest producte"
@@ -1194,15 +1229,15 @@ msgstr "Valora aquest producte"
 msgid "How did you like it?"
 msgstr "Li ha agradat?"
 
-#: woocommerce/order/order-details-item.php:80
+#: woocommerce/order/order-details-item.php:82
 msgid "Repeat meal"
 msgstr "Tornaria a demanar aquest plat"
 
-#: woocommerce/order/order-details-item.php:83
+#: woocommerce/order/order-details-item.php:85
 msgid "Would you like a variation? What kind?"
 msgstr "Seria interessant variar aquest plat? De quina manera?"
 
-#: woocommerce/order/order-details-item.php:86
+#: woocommerce/order/order-details-item.php:88
 msgid "How can we improve this dish?"
 msgstr ""
 "De quina manera podem millorar aquest plat? Comparti la seva experiència:"
@@ -1305,6 +1340,14 @@ msgstr ""
 #: woocommerce/single-product/tabs/description.php:25
 msgid "Description"
 msgstr "Detalls"
+
+#, fuzzy
+#~| msgid "Date:"
+#~ msgid "Date"
+#~ msgstr "Data:"
+
+#~ msgid "View and Rate"
+#~ msgstr "Mostra i valora"
 
 #~ msgid "Tell us about your experience"
 #~ msgstr "Fes-ens arribar la vostra experiència:"
