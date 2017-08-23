@@ -100,7 +100,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	 jQuery( '.order-comment-item' ).on( 'input' , function() {
 	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
 	 });
-	 jQuery.post( '/wp-admin/admin-ajax.php', {
+	 jQuery.post( '/wordpress/wp-admin/admin-ajax.php', {
 	     action: 'myc_read_order_comments',
 	 }, function( response ) {
 	     var props_of = JSON.parse( response );
@@ -117,7 +117,7 @@ $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_cu
 	     var postData = jQuery( this ).serializeArray();
 	     event.preventDefault();
 	     event.stopImmediatePropagation();
-	     jQuery.post( ajaxurl, {
+	     jQuery.post( '/wordpress/wp-admin/admin-ajax.php', {
 		 action: 'myc_write_order_comments',
 		 data: postData,
 		 _nonce: '<?php echo wp_create_nonce( 'myc_write_order_comments' ) ?>'
