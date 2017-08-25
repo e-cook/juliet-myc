@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-08-23 12:01+0200\n"
-"PO-Revision-Date: 2017-08-23 12:01+0200\n"
+"POT-Creation-Date: 2017-08-25 11:44+0200\n"
+"PO-Revision-Date: 2017-08-25 15:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -1068,7 +1068,7 @@ msgstr ""
 
 #: woocommerce/checkout/form-pay.php:30
 msgid "Qty"
-msgstr "Quant."
+msgstr "Quant"
 
 #: woocommerce/checkout/form-pay.php:31
 msgid "Totals"
@@ -1156,6 +1156,22 @@ msgstr "Métode de pagament:"
 #: woocommerce/checkout/thankyou.php:91
 msgid "<h2>Thank you.</h2> <p>Your order has been received.</p>"
 msgstr "<h2>Gr&aacute;cies.</h2> <p>Hem rebut la vostra comanda.</p>"
+
+#: woocommerce/emails/admin-order-now.php:28
+msgid ""
+"You can now place your orders for next week. You can choose from the "
+"following dishes:"
+msgstr ""
+"Ja pot fer la comanda per la setmana vinent. Aquesta setmana, tenim els "
+"següents plats:"
+
+#: woocommerce/emails/admin-reminder-to-order.php:28
+msgid ""
+"Remember to order by midnight tonight. You can choose from the following "
+"dishes:"
+msgstr ""
+"No oblidi fer la seva comanda avui abans de les 12 de la nit. Aquesta "
+"setmana oferim els següents plats:"
 
 #: woocommerce/functions_woocommerce.php:13
 msgid "Home"
