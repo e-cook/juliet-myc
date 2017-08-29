@@ -17,52 +17,31 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 
 global $product;
 
 // Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
-	return;
+    return;
 }
 
-if( is_shop() ) {
-    /*
-	$current_post = $wp_query->current_post + 1;
-    if (($current_post % 4 === 0) || ($wp_query->post_count === $current_post)) {
-        $row_open = '';
-        $row_close = '</div>';
-    } else {
-        if ($current_post % 4 === 1) {
-            $row_open = '<div class="row">';
-            $row_close = '';
-        } else {
-            $row_open = '';
-            $row_close = '';
-        }
+$row_open = '';
+$row_close = '';
+
+if( is_shop() || isset( $doing_email ) ) {
+    $current_post = $wp_query->current_post;
+    if ( $current_post % 4 == 0 ) {
+	$row_open = '<div class="row">';
     }
-	*/
-	$current_post = $wp_query->current_post;
-	if($current_post % 4 == 0) {
-		$row_open = '<div class="row">';
-		$row_close = '';
-	} else if ( ($current_post+1) % 4 == 0 ){
-		$row_open = '';
-		$row_close = '</div>';
-	} else {
-		$row_open = '';
-        $row_close = '';
+    if ( ($current_post+1) % 4 == 0 ||
+	 $wp_query->post_count == ($current_post)+1 ) {
+	$row_close = '</div>';
     }
-	if($wp_query->post_count == ($current_post)+1){
-		$row_close = '</div>';
-	}
-} else {
-    $row_open = '';
-    $row_close = '';
 }
-?>
-<?php echo $row_open; ?>
+
+echo $row_open; ?>
 <div class="col-sm-6 col-md-3">
     <div <?php post_class('juliet-loop-product'); ?>>
         <?php

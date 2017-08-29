@@ -45,6 +45,8 @@ $query = new WP_Query(
     )
 );
 
+$doing_email = 1;
+
 if ( $query->have_posts() ) {
     do_action( 'woocommerce_before_shop_loop' );
     woocommerce_product_loop_start();
@@ -57,6 +59,8 @@ if ( $query->have_posts() ) {
 } else {
     do_action( 'woocommerce_no_products_found' );
 }
+
+unset( $doing_email );
 
 /**
  * @hooked WC_Emails::email_footer() Output the email footer
