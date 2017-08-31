@@ -25,9 +25,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
-<p><?php _e( 'You can now place your orders for next week. You can choose from the following dishes:', 'juliet' ); ?></p>
+<h1><?php echo $email_heading; ?></h1>
 
 <?php
+global $wpdb;
 
 $query = new WP_Query(
     array(
@@ -42,25 +43,51 @@ $query = new WP_Query(
 		'terms'    => $target_tag,
 	    ),
 	),
-    )
+    )	
 );
-
-$doing_email = 1;
 
 if ( $query->have_posts() ) {
     do_action( 'woocommerce_before_shop_loop' );
-    woocommerce_product_loop_start();
+    echo '<table style="border-spacing:20px 20px;">';
+
     while( $query->have_posts() ) {
 	$query->the_post();
-	wc_get_template_part( 'content', 'product' );
+	global $post, $product;
+	$row = '<tr>';
+	$row .= '<td>' . wp_get_attachment_image( get_post_thumbnail_id( $post->ID ) ) . '</td>';
+	$row .= '<td>';
+	$row .= '<h2><a href="' . $product->get_permalink() . '">' . $post->post_title . '</a></h2><br>';
+
+	$row .= '<div><i>';
+	$tags_of_product = $wpdb->get_col( "SELECT t.name FROM {$wpdb->prefix}term_relationships tr INNER JOIN {$wpdb->prefix}term_taxonomy tt USING (term_taxonomy_id) INNER JOIN {$wpdb->prefix}terms t USING (term_id) WHERE tr.object_id = {$post->ID} AND tt.taxonomy = 'product_tag'" );
+	$row .= implode( ', ', $tags_of_product );
+	$row .= '</i></div><br>';
+
+	if ( 'variable_meal' == $product->get_type() ) {
+	    $row .= '<div><b>' . __( 'Available sizes', 'juliet' ) . '</b>: '; 
+	    $attr_array = array();
+	    foreach ( $product->get_attributes() as $taxonomy => $attr_obj ) {
+		foreach ( $attr_obj->get_options() as $option_id ) {
+		    $attr_array[] = get_term_by( 'id', $option_id, $taxonomy )->name;
+		}
+	    }
+	    $row .= implode( ', ', $attr_array );
+	    $row .= '</div><br>';
+	}
+
+	$row .= '<div class="price"><b>' . __( 'Price', 'juliet' ) . '</b>: ' . $product->get_price_html() . '</div><br>';
+	$row .= '<div><i>' . $product->get_description() . '</i></div>';
+	$row .= '</td>';
+	$row .= '</tr>';
+	echo $row;
     }
+    echo '</table>';
     woocommerce_product_loop_end();
     do_action( 'woocommerce_after_shop_loop' );
 } else {
     do_action( 'woocommerce_no_products_found' );
 }
 
-unset( $doing_email );
 
 /**
  * @hooked WC_Emails::email_footer() Output the email footer

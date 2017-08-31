@@ -44,7 +44,7 @@ function juliet_template_loop_product_thumb()
 {
     $output = "<div class=\"product-thumb\">\n";
     $output .= "\t\t\t<a href=\"".get_the_permalink()."\" class=\"woocommerce-LoopProduct-link\">\n";
-    $output .= "\t\t\t\t".woocommerce_get_product_thumbnail()."\n";
+    $output .= "\t\t\t\t".woocommerce_get_product_thumbnail( 'shop_thumbnail' )."\n";
     $output .= "\t\t\t</a>\n";
     $output .= "\t\t\t<span class=\"product-thumb-bag-icon\"><i class=\"fa fa-shopping-bag\"></i></span>\n";
     echo $output;

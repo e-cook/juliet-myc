@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2017-08-28 08:46+0200\n"
-"PO-Revision-Date: 2017-08-28 08:48+0200\n"
+"POT-Creation-Date: 2017-09-01 00:19+0200\n"
+"PO-Revision-Date: 2017-09-01 00:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ca\n"
@@ -932,6 +932,7 @@ msgid "Product"
 msgstr "Producte"
 
 #: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:96
+#: woocommerce/emails/admin-order-now.php:78
 msgid "Price"
 msgstr "Preu"
 
@@ -1164,6 +1165,10 @@ msgid ""
 msgstr ""
 "Ja es pot fer la comanda per la setmana vinent. Aquesta setmana, tenim els "
 "següents plats:"
+
+#: woocommerce/emails/admin-order-now.php:67
+msgid "Available sizes"
+msgstr "Tamanys disponibles"
 
 #: woocommerce/emails/admin-reminder-to-order.php:28
 msgid ""
