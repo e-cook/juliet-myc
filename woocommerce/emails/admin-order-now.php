@@ -27,6 +27,8 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <h1><?php echo $email_heading; ?></h1>
 
+<p><?php echo $email_intro; ?></p>
+
 <?php
 global $wpdb;
 
@@ -58,13 +60,13 @@ if ( $query->have_posts() ) {
 	$row .= '<td>';
 	$row .= '<h2><a href="' . $product->get_permalink() . '">' . $post->post_title . '</a></h2><br>';
 
-	$row .= '<div><i>';
+	$row .= '<p style="margin-top:0;margin-bottom:5px;"><i>';
 	$tags_of_product = $wpdb->get_col( "SELECT t.name FROM {$wpdb->prefix}term_relationships tr INNER JOIN {$wpdb->prefix}term_taxonomy tt USING (term_taxonomy_id) INNER JOIN {$wpdb->prefix}terms t USING (term_id) WHERE tr.object_id = {$post->ID} AND tt.taxonomy = 'product_tag'" );
 	$row .= implode( ', ', $tags_of_product );
-	$row .= '</i></div><br>';
+	$row .= '</i></p>';
 
 	if ( 'variable_meal' == $product->get_type() ) {
-	    $row .= '<div><b>' . __( 'Available sizes', 'juliet' ) . '</b>: '; 
+	    $row .= '<p style="margin-top:0;margin-bottom:5px;"><b>' . __( 'Available sizes', 'juliet' ) . '</b>: '; 
 	    $attr_array = array();
 	    foreach ( $product->get_attributes() as $taxonomy => $attr_obj ) {
 		foreach ( $attr_obj->get_options() as $option_id ) {
@@ -72,11 +74,11 @@ if ( $query->have_posts() ) {
 		}
 	    }
 	    $row .= implode( ', ', $attr_array );
-	    $row .= '</div><br>';
+	    $row .= '</p>';
 	}
 
-	$row .= '<div class="price"><b>' . __( 'Price', 'juliet' ) . '</b>: ' . $product->get_price_html() . '</div><br>';
-	$row .= '<div><i>' . $product->get_description() . '</i></div>';
+	$row .= '<p style="margin-top:0;margin-bottom:5px;" class="price"><b>' . __( 'Price', 'juliet' ) . '</b>: ' . $product->get_price_html() . '</p>';
+	$row .= '<p style="margin-top:0;margin-bottom:5px;"><i>' . $product->get_description() . '</i></p>';
 	$row .= '</td>';
 	$row .= '</tr>';
 	echo $row;
