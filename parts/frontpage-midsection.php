@@ -7,7 +7,6 @@
 ?>
 <?php 
 $juliet_frontpage_midsection_show = juliet_get_option('juliet_frontpage_midsection_show');
-error_log("midsection left: " . juliet_get_option( 'juliet_frontpage_midsection_left' ) ); 
 if ( $juliet_frontpage_midsection_show == 1 ) { ?>
     
     <!-- Frontpage Featured Posts -->

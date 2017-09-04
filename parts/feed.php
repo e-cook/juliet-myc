@@ -13,7 +13,6 @@ $juliet_blog_feed_author_show = juliet_get_option('juliet_blog_feed_author_show'
 $juliet_blog_feed_comments_show = juliet_get_option('juliet_blog_feed_comments_show');
 $juliet_blog_feed_post_format = juliet_get_option('juliet_blog_feed_post_format');
 global $post;
-error_log("post name: " . $post->post_name);
 if ( 'bloc' == $post->post_name ||
      'receptes' == $post->post_name ) {
 ?>
