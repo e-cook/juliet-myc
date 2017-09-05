@@ -39,16 +39,5 @@ if ( is_active_sidebar( 'footer-row-1-col-1' ) || is_active_sidebar( 'footer-row
     <div class="footer-row-2-center"><?php dynamic_sidebar( 'footer-row-2-center' ); ?></div>
     <?php } ?>
     
-    <?php $juliet_footer_copyright = juliet_get_option('juliet_footer_copyright'); ?>
-    <?php if($juliet_footer_copyright != '') { ?>
-    <div class="footer-copyright"><?php echo wp_kses_post($juliet_footer_copyright); ?></div>
-    <?php } ?>
-    
-    <div class="footer-copyright">
-        <ul class="credit">
-            <li><a href="https://www.lyrathemes.com/juliet/" target="_blank"><?php esc_html_e('Juliet', 'juliet'); ?></a> <?php esc_html_e('by LyraThemes.com', 'juliet'); ?></li>
-        </ul>
-    </div>
-
 </div>
 <!-- /Footer Row 2 -->
