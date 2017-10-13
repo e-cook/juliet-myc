@@ -13,113 +13,80 @@
  * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.0
+ * @version 3.2.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
+}
+if ( ! $order = wc_get_order( $order_id ) ) {
+	return;
 }
 
-if ( ! $order = wc_get_order( $order_id ) ) {
-    return;
-}
+$order_items           = $order->get_items( apply_filters( 'woocommerce_purchase_order_item_types', 'line_item' ) );
 $show_purchase_note    = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array( 'completed', 'processing' ) ) );
 $show_customer_details = is_user_logged_in() && $order->get_user_id() === get_current_user_id();
+$downloads             = $order->get_downloadable_items();
+$show_downloads        = $order->has_downloadable_item() && $order->is_download_permitted();
+
+if ( $show_downloads ) {
+	wc_get_template( 'order/order-downloads.php', array( 'downloads' => $downloads, 'show_title' => true ) );
+}
 ?>
-
 <section class="woocommerce-order-details">
+	<h2 class="woocommerce-order-details__title"><?php _e( 'Order details', 'woocommerce' ); ?></h2>
 
-    <h2 class="woocommerce-order-details__title"><?php _e( 'Order details', 'woocommerce' ); ?></h2>
-
-    <form id="order-comments-form">
 	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
-	    
-	    <thead>
-		<tr>
-		    <th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-		    <th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
-		    <th class="woocommerce-table__product-table product-total"><?php _e( 'Comments', 'juliet' ); ?>
-			&nbsp;<input type="submit" id="order-comments-submit-button" class="woocommerce-Button button button-primary disabled" value="<?php _e( 'Submit', 'woocommerce' ); ?>"></th>
-		</tr>
-	    </thead>
 
-	    <tbody>
-		<?php
-		$order_item_product_ids = array();
-		foreach ( $order->get_items() as $item_id => $item ) {
-		    $product = apply_filters( 'woocommerce_order_item_product', $item->get_product(), $item );
-		    $order_item_product_ids[] = $item->get_product()->get_id();
-		    
-		    wc_get_template( 'order/order-details-item.php', array(
-			'order'		 => $order,
-			'item_id'		 => $item_id,
-			'item'		 => $item,
-			'show_purchase_note' => $show_purchase_note,
-			'purchase_note'	 => $product ? $product->get_purchase_note() : '',
-			'product'	         => $product,
-		    ) );
-		}
-		?>
-		<?php do_action( 'woocommerce_order_items_table', $order ); ?>
-	    </tbody>
+		<thead>
+			<tr>
+				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			</tr>
+		</thead>
 
-	    <tfoot>
-		<?php
-		foreach ( $order->get_order_item_totals() as $key => $total ) {
-		?>
-		    <tr>
-			<th scope="row"><?php echo $total['label']; ?></th>
-			<td><?php echo $total['value']; ?></td>
-			<td/>
-		    </tr>
-		<?php
-		}
-		?>
-	    </tfoot>
+		<tbody>
+			<?php
+				foreach ( $order_items as $item_id => $item ) {
+					$product = apply_filters( 'woocommerce_order_item_product', $item->get_product(), $item );
 
+					wc_get_template( 'order/order-details-item.php', array(
+						'order'			     => $order,
+						'item_id'		     => $item_id,
+						'item'			     => $item,
+						'show_purchase_note' => $show_purchase_note,
+						'purchase_note'	     => $product ? $product->get_purchase_note() : '',
+						'product'	         => $product,
+					) );
+				}
+			?>
+			<?php do_action( 'woocommerce_order_items_table', $order ); ?>
+		</tbody>
+
+		<tfoot>
+			<?php
+				foreach ( $order->get_order_item_totals() as $key => $total ) {
+					?>
+					<tr>
+						<th scope="row"><?php echo $total['label']; ?></th>
+						<td><?php echo $total['value']; ?></td>
+					</tr>
+					<?php
+				}
+			?>
+			<?php if ( $order->get_customer_note() ) : ?>
+				<tr>
+					<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
+					<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
+				</tr>
+			<?php endif; ?>
+		</tfoot>
 	</table>
-    </form>
 
-    <script type="text/javascript">
-     jQuery(document).ready(function() {
-	 jQuery( '.order-comment-item' ).on( 'input' , function() {
-	     jQuery( '#order-comments-submit-button' ).removeClass( 'disabled' );
-	 });
-	 jQuery.post( '/wordpress/wp-admin/admin-ajax.php', {
-	     action: 'myc_read_order_comments',
-	     product_ids: <?php echo php_array_2_js( $order_item_product_ids ); ?>,
-	     _nonce: '<?php echo wp_create_nonce( 'myc_read_order_comments' ) ?>'
-	 }, function( response ) {
-	     var props_of = JSON.parse( response );
-	     for ( var product_id in props_of ) {
-		 jQuery( '#star-' + props_of[ product_id ][ 'star' ] + '-' + product_id ).attr( 'checked', true );
-		 if ( props_of[ product_id ][ 'repeat' ] == 1 ) {
-		     jQuery( '#repeat-box-' + product_id ).attr( 'checked', true );
-		 }
-		 jQuery( '#variation-' + product_id ).val( props_of[ product_id ][ 'variation' ] );
-		 jQuery( '#comment_content-' + product_id ).text( props_of[ product_id ][ 'comment_content' ] );
-	     }
-	 });
-	 jQuery( '#order-comments-form' ).submit( function( event ) {
-	     var postData = jQuery( this ).serializeArray();
-	     event.preventDefault();
-	     event.stopImmediatePropagation();
-	     jQuery.post( '/wordpress/wp-admin/admin-ajax.php', {
-		 action: 'myc_write_order_comments',
-		 data: postData,
-		 _nonce: '<?php echo wp_create_nonce( 'myc_write_order_comments' ) ?>'
-	     }, function() {
-		 jQuery( '#order-comments-submit-button' ).addClass( 'disabled' );		 
-	     });
-	     return false;
-	 });
-     });
-    </script>
-
-    <?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
-
-    <?php if ( $show_customer_details ) : ?>
-	<?php wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) ); ?>
-    <?php endif; ?>
-
+	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
+
+<?php
+if ( $show_customer_details ) {
+	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
+}
